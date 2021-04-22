@@ -41,7 +41,7 @@ public class Task2 {
         maxValueArray = numbers[numbers.length - 1];
 
         //avg of Array
-        avgArray = Math.round((double) sumArray / (double) size);
+        avgArray = Math.round(((double) sumArray / (double) size)*100.0)/100.0;
 
         //print result
         System.out.println("Created array of numbers: " + Arrays.toString(numbers) + '\n' +
