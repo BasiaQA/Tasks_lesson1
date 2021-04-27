@@ -9,13 +9,15 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please, pass the size of your array:");
 
-        while (!sc.hasNextInt()) {
-            sc.next();
-            System.out.println("This is not the integer number, please try once again:");
-        }
-
-        //size of array
-        int size = sc.nextInt();
+        int size;
+        do {
+            while (!sc.hasNextInt()) {
+                sc.next();
+                System.out.println("This is not the integer number, please try once again:");
+            }
+            size = sc.nextInt();
+            System.out.println("You have to pass positive number, please try once again:");
+        } while (size <= 0);
 
         int[] numbers = new int[size];
         double avgArray;
@@ -41,7 +43,7 @@ public class Task2 {
         maxValueArray = numbers[numbers.length - 1];
 
         //avg of Array
-        avgArray = Math.round(((double) sumArray / (double) size)*100.0)/100.0;
+        avgArray = Math.round(((double) sumArray / (double) size) * 100.0) / 100.0;
 
         //print result
         System.out.println("Created array of numbers: " + Arrays.toString(numbers) + '\n' +
