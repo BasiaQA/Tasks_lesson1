@@ -9,6 +9,7 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please, pass the size of your array:");
 
+        //size of array
         int size;
         do {
             while (!sc.hasNextInt()) {
